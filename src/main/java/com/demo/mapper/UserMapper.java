@@ -9,7 +9,7 @@ import com.demo.bean.UserBean;
 @Mapper
 public interface UserMapper {
 //	UserMapper.xmlから全リストを受け取るメソッド
-//	UserServiceクラスのgetAllUser()メソッドの戻り値となる	
+//	UserServiceクラスのselectAllUser()メソッドの戻り値となる	
 	public List<UserBean> selectAllUser();
 
 //	UserMapper.xmlからパラメータで渡されたidのリストを受け取るメソッド
