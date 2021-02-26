@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!--  SQL文や検索結果のマッピング方法などを定義したファイル -->
+    <!--　 Resource上でUserMapper.javaと同じパスに置く -->
+    
+    <!-- UserMapper.javaの -->
+    <mapper namespace="com.demo.mapper.UserMapper">
+		<!-- selectAllUser()メソッドに オブジェクトをUserBean型で渡す-->
+	  	<select id="selectAllUser" resultType="com.demo.bean.UserBean">
+	  		<!-- DB内の全リストを返す -->
+	  		select * from user_data
+	  	</select>
+	  	<!-- selectUserById()メソッドに オブジェクトをUserBean型で渡す-->
+	  	<select id="selectUserById" resultType="com.demo.bean.UserBean" >
+	  		<!-- パラメータのidを受け取り、該当するDB内のリストを返す -->
+	  		select * from user_data where id=#{id}
+	  	</select>
+    </mapper>
